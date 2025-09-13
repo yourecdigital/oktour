@@ -1,0 +1,86 @@
+.floating-contact-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floating-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.floating-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.phone-button {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.message-button {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.floating-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .floating-contact-buttons {
+    bottom: 15px;
+    right: 15px;
+    gap: 10px;
+  }
+  
+  .floating-button {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .floating-button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .floating-contact-buttons {
+    bottom: 18px;
+    right: 18px;
+  }
+}
+
+
+
+
+
+
